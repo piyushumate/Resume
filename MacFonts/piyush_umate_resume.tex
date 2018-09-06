@@ -1,0 +1,214 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\rfoot{Page \thepage \hspace{1pt}}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Piyush	}{Umate}{ \urlstyle{same}
+ 213-322-8933 | \href{mailto:pumate@usc.edu}{pumate@usc.edu}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{University of Southern}
+\subsection{California}
+\descript{MS in Computer Science}
+\location{Exp. Dec 2019 | Los Angeles, CA}
+\sectionsep
+
+\subsection{Pune Institute of}
+\subsection{Computer Technology}
+\descript{BE in Computer Engineering}
+\location{May 2015 | Pune, India}
+\location{ CGPA: 9.00 / 10 }
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/piyushumate}{\bf piyushumate} \\
+LinkedIn://  \href{https://www.linkedin.com/in/piyush-umate}{\bf piyush-umate} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Graduate}
+Analysis of Algorithms \\
+Foundations of Artificial Intelligence \\
+Foundations \& Applications of Data Mining \\
+Machine Learning \\
+\sectionsep
+
+\subsection{Undergraduate}
+Data Structures \\
+Computer Networks \\
+Compiler Design \\
+Software Engineering \\
+Object Oriented Modeling \& Design \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Advanced:}
+C \textbullet{}   C++ \textbullet{} Python \textbullet{} MySQL \textbullet{} PHP \\ 
+\location{Proficient:}
+Javascript \textbullet{} Scala \textbullet{} SASS/CSS \\
+\location{Familiar:}
+C\# \textbullet{}  Java \textbullet{} \LaTeX\ \\ 
+\sectionsep
+\subsection{Tools \& Frameworks}
+Spark \textbullet{} Flask \textbullet{} Linux \textbullet{} Symfony \\
+Git \textbullet{} AngularJS \textbullet{} Elasticsearch \\
+Zend \textbullet{} GulpJS \textbullet{} ASP.NET \\
+MongoDb \textbullet{} OpenCV
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{USC Graduate School}
+\descript{| Student Assistant Programmer}
+\location{June 2018 - Aug 2018 | Los Angeles, CA}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Managed, modeled and analysed student data by building scalable web applications. 
+\item Developed analytics \& reports to summarize, scrutinize \& evaluate the progress of Graduate \& PHD programs. {\bf Technologies :- C\#, ASP.NET, Javascript, SSRS, SQL, Kendo UI}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{AITOE Labs - IIT Bombay}
+\descript{| Research Intern }
+\location{Sep 2017 – Nov 2017 | Bombay, India}
+\begin{tightemize}
+\item Built a realtime object recognition module using OpenCV 3.3 dnn module and pretrained MobileNet-SSD Caffe model under the guidance of Prof. Ganesh Ramakrishnan and Prof. Vishal Kaushal.
+\item Optimized OpenCV performance on Raspberry Pi by 30\% by utilizing ARM NEON, VFPV3 and threading building blocks optimizations.
+\item Implemented a benchmarking algorithm to evaluate the performance of neural network based real time object detection algorithms on embedded devices. {\bf Technologies :- C++, OpenCV, Python.}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Practo}
+\descript{| Software Engineer}
+\location{July 2015 – June 2017 | Bangalore, India}
+\begin{tightemize}
+\item Created secure anonymous web crawlers \& data scrapers to retrieve medical data from over 30 websites. {\bf Technologies :- Tor, Python Scrapy, PhantomJS.}
+\item Implemented data preprocessing algorithms for refining scraped data and used Elasticsearch and {\bf MySQL} for indexing large size documents for efficient searching through the data. {\bf Technologies :- Symfony, PHP, Zend.}
+\item Architected \& developed an e-commerce application called 'Store' to help 1M doctors manage their Practo product subscriptions online. Integrated tracking systems to understand user behavior and shipped a suite of support tools to reduce customer issue resolution TAT from 3 days to 5 minutes. {\bf Technologies :- Flask, AngularJS.}
+\item Internationalized and localized Practo search platform as well as scaled it to 5 countries where its helping 25M patients find over 1M doctors. {\bf Technologies :- Flask, Symfony.}
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{PROJECTS}
+\runsubsection{Collaborative Social Network engine for Recommendation \& Analytics}
+\descript{}
+Developed an application that collates users posts from Facebook, Twitter, Google+, LinkedIn \& Github, classifies posts into a set of predefined categories \& provides users with relevant collaborative recommendations using natural language processing \& machine learning. {\bf Technologies :- Python, Flask, Javascript, MongoDb.}
+\sectionsep
+
+\runsubsection{Recommendation System}
+\descript{}
+Movie recommendation system using collaborative filtering on MovieLens dataset. {\bf Technologies :- Python, Scala, Spark.}
+\sectionsep
+
+\runsubsection{Othello AI bot}
+\descript{}
+Developed an adversarial game search module in {\bf Python} for Othello to determine the next best move for the player using Alpha-Beta pruning. 
+\sectionsep
+\end{minipage} 
+\end{document}  \documentclass[]{article}
